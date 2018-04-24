@@ -2,10 +2,10 @@
 
 all:checkdir bin/prog
 
-bin/prog:build/doska.o build/form.o build/FirstDoska.o build/board.o
-	gcc build/doska.o build/form.o build/FirstDoska.o build/board.o -o bin/prog
+bin/prog:build/chessviz.o build/form.o build/FirstDoska.o build/board.o
+	gcc build/chessviz.o build/form.o build/FirstDoska.o build/board.o -o bin/prog
 build/doska.o:src/doska.c
-	gcc -c src/doska.c -o build/doska.o -Wall -Werror
+	gcc -c src/chessviz.c -o build/chessviz.o -Wall -Werror
 build/form.o:src/form.c
 	gcc -c src/form.c -o build/form.o -Wall -Werror
 build/FirstDoska.o:src/FirstDoska.c
