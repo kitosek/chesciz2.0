@@ -4,11 +4,15 @@
 #include "form.h"
 int main ()
 {
-	//int i,j;
-	char A[10][10];
+	char A[10][10],str[20];
 	FirstDoska(A);
 	PrintDoska(A);
-	board(A);
+	do
+	{
+	scanf("%s",str);
+	if(strcmp(str, "exit") == 0) break; 
+	board(A,str);
 	PrintDoska(A);
+	}while(1);
 	return 0;
 }
